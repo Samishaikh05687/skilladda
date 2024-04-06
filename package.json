@@ -33,10 +33,12 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "convex": "^1.11.0",
+    "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.0.1",
     "lucide-react": "^0.365.0",
     "next": "14.1.4",
     "next-themes": "^0.3.0",
+    "query-string": "^9.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.2",
@@ -44,7 +46,8 @@
     "stripe": "^14.24.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.5",
