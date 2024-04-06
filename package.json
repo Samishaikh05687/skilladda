@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@blocknote/core": "^0.12.4",
+    "@blocknote/react": "^0.12.4",
     "@clerk/clerk-react": "^4.30.9",
     "@clerk/nextjs": "^4.29.11",
     "@hookform/resolvers": "^3.3.4",
@@ -39,6 +41,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.51.2",
     "sonner": "^1.4.41",
+    "stripe": "^14.24.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"

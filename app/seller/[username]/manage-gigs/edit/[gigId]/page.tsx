@@ -14,8 +14,8 @@ import { Description } from "@/components/description";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { Images } from "@/components/images";
-// import { TitleEditor } from "@/components/title-editor";
-// import { OffersEditor } from "./_components/offers-editor";
+import { TitleEditor } from "@/components/title-editor";
+import { OffersEditor } from "./_components/offers-editor";
 
 import { Label } from "@/components/ui/label";
 
@@ -137,10 +137,10 @@ const Edit = ({ params }: EditdPageProps) => {
                     </Button>
                 </div>
 
-                {/* <TitleEditor
+                <TitleEditor
                     id={gig._id}
                     title={gig.title}
-                /> */}
+                />
                 <div className="w-[800px]">
                     <Images
                         images={gig.images}
@@ -173,9 +173,9 @@ const Edit = ({ params }: EditdPageProps) => {
                    
                 </div>
 
-                {/* <OffersEditor
+                <OffersEditor
                     gigId={gig._id}
-                /> */}
+                />
 
                 <h2 className="font-semibold">About this gig</h2>
             </div>

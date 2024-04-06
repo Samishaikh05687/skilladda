@@ -1,6 +1,6 @@
 import { v } from "convex/values";
 import { action, internalMutation, internalQuery, mutation, query } from "./_generated/server";
-// import Stripe from "stripe";
+import Stripe from "stripe";
 import { api, internal } from "./_generated/api";
 
 export const store = mutation({
