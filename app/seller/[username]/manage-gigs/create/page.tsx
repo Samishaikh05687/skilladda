@@ -3,6 +3,7 @@
 import { CreateForm } from "./_components/create-form";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { useEffect } from "react";
 
 interface CreateGigProps {
     params: {
@@ -13,7 +14,10 @@ interface CreateGigProps {
 const CreateGig = ({
     params
 }: CreateGigProps) => {
-    const insertCategories = useMutation(api.seedCategories.create);
+    const insertSubCategories = useMutation(api.seedSubcategories.create);
+    useEffect(() => {
+        insertSubCategories({});
+    })
     return (
         <div className="flex justify-center">
             <CreateForm
