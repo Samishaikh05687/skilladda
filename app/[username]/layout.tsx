@@ -1,4 +1,3 @@
-
 import Navbar from "../(dashboard)/_components/navbar";
 
 interface UserGigLayoutProps {

@@ -3,7 +3,7 @@
 import { Loading } from "@/components/auth/loading";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
-// import { setStripeAccountSetupComplete } from "@/convex/stripe";
+import { setStripeAccountSetupComplete } from "@/convex/stripe";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { useAction } from "convex/react";
 import { useRouter } from "next/navigation";
