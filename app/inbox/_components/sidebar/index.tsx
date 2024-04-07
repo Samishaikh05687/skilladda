@@ -1,33 +1,46 @@
-
 "use client";
 
-import { useQuery } from "convex/react";
-import Navbar from "../(dashboard)/_components/navbar";
-import { Sidebar } from "./_components/sidebar";
-import { api } from "@/convex/_generated/api";
-import ConversationList from "./_components/sidebar/conversation-list";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { LayoutDashboardIcon, Star } from "lucide-react";
+import { Poppins } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
-export default function ConversationsLayout({
-    children
-}: {
-    children: React.ReactNode,
-}) {
-    return (
-        <>
-            <div className="fixed z-10 w-full">
-                <Navbar />
-            </div>
-            <div className="pt-[88px]">
-                <Sidebar>
-                    <div className="h-full">
-                        <ConversationList />
-                    </div>
-                </Sidebar>
-                <div className="h-full lg:pl-[300px]">
-                    {children}
-                </div>
-            </div>
+const font = Poppins({
+    subsets: ["latin"],
+    weight: ["600"],
+})
 
-        </>
-    );
+interface SidebarProps {
+    children: React.ReactNode;
 }
+
+export const Sidebar = ({
+    children
+}: SidebarProps) => {
+    return (
+        <aside className="fixed z-[1] left-0 bg-blue-950 h-full w-[300px] hidden lg:flex p-3 pt-5 flex-col gap-y-4 text-white">
+            <Link href="/">
+                <div className="flex items-center gap-x-6 w-full">
+                    <Image
+                        src="/logo.svg"
+                        alt="Logo"
+                        height={60}
+                        width={60}
+                    />
+                    <span className={cn(
+                        "font-semibold text-2xl",
+                        font.className,
+                    )}>
+                        Givian
+                    </span>
+                </div>
+            </Link>
+            <div className="">
+                {children}
+            </div>
+        </aside>
+    );
+};

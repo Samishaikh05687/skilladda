@@ -1,4 +1,3 @@
-
 "use client";
 
 import { SignInButton, SignUpButton, UserButton, useClerk } from "@clerk/nextjs";
@@ -25,7 +24,7 @@ import { Filter, Heart, MessageCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 // import { ListItem } from "./list-item";
 import { TooltipProvider } from "./tooltip-provider";
-
+import { ListItem } from "./list-item";
 import ConnectStripe from "./connect-stripe";
 
 
@@ -87,7 +86,6 @@ const Navbar = () => {
                                                     title={subcategory.name}
                                                     subcategory={subcategory}
                                                 />
-                                               
                                             ))}
                                         </div>
                                     </div>
